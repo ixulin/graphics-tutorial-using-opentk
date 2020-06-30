@@ -6,6 +6,7 @@
 
 ## 第一课：用顶点绘制三角形（5小时)
 1. 用opentk打开opengl窗口（1小时）
+    - 直接在NuGet中安装OpenTK即可，然后看一下OpenTK的默认如何显示空白Window
     - Tips
         > 说明：Tips为遇到问题时可提供的参考，请自己先思考、实践之后再看，以下雷同
         - http://neokabuto.blogspot.com/2013/02/opentk-tutorial-1-opening-windows-and.html
@@ -20,10 +21,14 @@
         - Matrix4.LookAt
     - Tips
         - 理解“OpenGL是一个状态机”
+        - 理解模型空间坐标系、相机空间坐标系、视口空间坐标系、屏幕空间坐标系的区别
         - Model矩阵、View矩阵、Projection矩阵、Viewport
         - https://learnopengl-cn.github.io/01%20Getting%20started/07%20Transformations/
         - https://learnopengl-cn.github.io/01%20Getting%20started/08%20Coordinate%20Systems/
         - GL.Vertex3()、GL.Color()
+
+3. 目标 
+    - ![img](images/lesson1.png)
 
 ## 第二课：利用缓冲区对象替换GL.Vertex3()绘制之前的三角形
 1. 理解关于顶点绘制的各种缓冲区对象（2小时）
@@ -56,6 +61,10 @@
     - 相关接口
         - GL.BufferData
         - GL.VertexAttribPointer
+
+
+3. 目标 
+    - ![img](images/lesson1.png)
 
 ## 第四课：封装
 1. 重构之前的代码（6小时）

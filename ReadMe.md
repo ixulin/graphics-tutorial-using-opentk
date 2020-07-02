@@ -86,3 +86,12 @@
 1. 给Geometry类添加LoadObjFromFile()接口（1小时）
 2. 添加Scene类（1小时）
 3. 将Res/Geometry/tetrahedron.obj载入场景并显示（1小时）
+4. 将上述四面体创建50个以不同的位置、旋转、缩放放置于场景中的不同位置，并能正确显示
+
+## 第六课：实现自己的StaticBatching或者Dynamic Batching
+1. 如果不做任何处理，上述场景至少有50个Drawcall
+2. 采用上述技术中的一种来减少Drawcall
+
+## 第七课：加载纹理并贴图
+
+## 第八课：实现Lambert光照

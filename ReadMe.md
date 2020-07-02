@@ -28,11 +28,11 @@
     - Tips
         - 理解“OpenGL是一个状态机”
         - 理解模型空间坐标系、相机空间坐标系、视口空间坐标系、屏幕空间坐标系的区别
-        - Model矩阵、View矩阵、Projection矩阵、Viewport
+            - 回忆线性代数中关于矩阵的用法
         - https://learnopengl-cn.github.io/01%20Getting%20started/07%20Transformations/
         - https://learnopengl-cn.github.io/01%20Getting%20started/08%20Coordinate%20Systems/
 
-3. 目标 
+3. 目标效果图 
     - ![img](images/lesson1.png)
 
 ## 第二课:了解着色器的基本使用
@@ -43,25 +43,27 @@
         - GL.CompileShader
         - GL.AttachShader
 2. 理解不同着色阶段的数据传递（3小时）
-    - 理解VAO中的数据管理
     - 相关接口
         - GL.VertexAttribPointer
     - Tips
-        - 属性绑定点: 应用程序阶段（cpu）的数据Shader（gpu）如何读取？
-        - 属性传递：Application -> Vertex -> Fragment
+        - 绑定点: 应用程序阶段（cpu）的数据Shader（gpu）如何读取？
+            - 理解VAO中的数据存储及偏移
+        - 传递：Application -> Vertex -> Fragment
+            - 理解顶点着色器的输入、输出是啥
+            - 理解像素着色器的输入、输出是啥
         - http://neokabuto.blogspot.com/2013/03/opentk-tutorial-2-drawing-triangle.html
         - https://opentk.net/learn/chapter1/2-hello-triangle.html
         - https://learnopengl-cn.github.io/01%20Getting%20started/04%20Hello%20Triangle/
 
 
-## 第二课：利用缓冲区对象替换GL.Vertex3()绘制之前的三角形
+## 第三课：利用缓冲区对象替换GL.Vertex3绘制之前的三角形
 1. 理解关于顶点绘制的各种缓冲区对象（2小时）
     - Tips
         - VAO、VBO、EBO
         - 理解顶点和索引的区别
         - https://opentk.net/learn/chapter1/2-hello-triangle.html
         - https://learnopengl-cn.github.io/01%20Getting%20started/04%20Hello%20Triangle/
-2. 利用缓冲区对象替换GL.Vertex3()绘制之前的三角形（6小时）
+2. 利用缓冲区对象替换GL.Vertex3绘制之前的三角形（6小时）
     - 相关接口
         - GL.GenBuffers
         - GL.BindBuffer
@@ -86,12 +88,27 @@
 1. 给Geometry类添加LoadObjFromFile()接口（1小时）
 2. 添加Scene类（1小时）
 3. 将Res/Geometry/tetrahedron.obj载入场景并显示（1小时）
-4. 将上述四面体创建50个以不同的位置、旋转、缩放放置于场景中的不同位置，并能正确显示
+4. 将上述四面体创建50个以不同的位置、旋转、缩放放置于场景中的不同位置，并能正确显示（3小时）
 
 ## 第六课：实现自己的StaticBatching或者Dynamic Batching
 1. 如果不做任何处理，上述场景至少有50个Drawcall
 2. 采用上述技术中的一种来减少Drawcall
+3. （可选）用Instancing技术来减少Drawcall
+
+## 第七课：实现物体层面的视锥体裁剪
+1. 思考为什么要这么做？
+2. 封装Gameobject类，并添加AABB box功能
+3. 实现视锥体裁剪
 
 ## 第七课：加载纹理并贴图
+1. 添加Texture类，并实现LoadTexFromFile()接口
+2. 在shader中贴图
 
 ## 第八课：实现Lambert光照
+1. 添加Light类
+2. 在shader中实现光照
+
+## 添加动画
+1. 添加顶点动画
+2. 用shader实现顶点动画
+3. 添加骨骼动画
